@@ -9,10 +9,7 @@ app.use(cors({
     origin: 'http://localhost:3000', // your frontend origin
 }));
 
-
 app.use(express.json());
-
-
 app.use('/api/users', userRoutes);
 
 sequelize.sync().then(() => {
